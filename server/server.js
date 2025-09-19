@@ -26,7 +26,12 @@ app.use(limiter);
 
 // CORS middleware
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: process.env.NODE_ENV === 'production' 
+    ? [
+        'https://todo-app-xyz123.vercel.app',  // Replace with YOUR actual Vercel URL
+        'http://localhost:3000'  // Keep for local development
+      ]
+    : ['http://localhost:3000'],
   credentials: true
 }));
 
