@@ -5,9 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
 
-const API_BASE = process.env.NODE_ENV === 'production' 
-  ? 'https://todo-app-backend-jas8.onrender.com' 
-  : 'http://localhost:5000';
+const API_BASE = 'https://todo-app-backend-jas8.onrender.com';
 
 function App() {
   // Auth states
