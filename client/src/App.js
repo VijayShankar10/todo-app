@@ -307,11 +307,13 @@ function App() {
       <Signup 
         onLogin={handleLogin}
         switchToLogin={() => setShowSignup(false)}
+        apiBase={API_BASE}
       />
     ) : (
       <Login 
         onLogin={handleLogin}
         switchToSignup={() => setShowSignup(true)}
+        apiBase={API_BASE}
       />
     );
   }

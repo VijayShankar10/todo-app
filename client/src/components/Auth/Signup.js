@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-function Signup({ onLogin, switchToLogin }) {
+function Signup({ onLogin, switchToLogin, apiBase }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,8 +39,7 @@ function Signup({ onLogin, switchToLogin }) {
 
     try {
       const { confirmPassword, ...signupData } = formData;
-      const response = await axios.post('http://localhost:5000/api/auth/register', signupData);
-
+      const response = await axios.post(`${apiBase}/api/auth/register`, signupData);
       
       // Store token and user data
       localStorage.setItem('token', response.data.token);
