@@ -27,8 +27,8 @@ app.use(limiter);
 // CORS middleware
 app.use(cors({
   origin: [
-    'https://todo-app-black-gamma.vercel.app',  // Your Vercel domain
-    'http://localhost:3000'  // Keep for local development
+    'https://my-todo-app-gamma-black.vercel.app',  // Your new domain
+    'http://localhost:3000'
   ],
   credentials: true
 }));
