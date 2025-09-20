@@ -23,7 +23,7 @@ function Login({ onLogin, switchToSignup, apiBase }) {
     setError('');
 
     try {
-      const response = await axios.post('${apiBase}/api/auth/login', formData);
+      const response = await axios.post(`${apiBase}/api/auth/login`, formData);
       
       // Store token and user data
       localStorage.setItem('token', response.data.token);
